@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Logo from "../assets/images/Cropped-logo.png";
 import TextInput from "./TextInput";
 import CustomButton from "./CustomButton";
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -20,10 +21,12 @@ const TopBar = () => {
   return (
     <div className="topbar w-full flex items-center justify-between py-3 md:py-6 px-4 shadow-lg">
       <Link to="/" className="flex gap-2 items-center">
-        <div className="p-1 md:p-2 rounded text-white"></div>
-        <span className="text-xl md:text-2xl text-black font-semibold">
+        <div className="p-1 md:p-2 rounded text-white">
+          <img src={Logo} alt="BloggyVerse" className="h-auto w-1/2"/>
+        </div>
+        {/* <span className="text-xl md:text-2xl text-black font-semibold">
           BLOGGYVERSE
-        </span>
+        </span> */}
       </Link>
       <form
         className="hidden md:flex items-center justify-center"

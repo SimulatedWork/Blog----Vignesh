@@ -2,5 +2,6 @@ import TextInput from "./TextInput";
 import Loading from "./Loading";
 import CustomButton from "./CustomButton";
 import TopBar from "./TopBar";
+import ProfileCard from "./ProfileCard";
 
-export { Loading, CustomButton, TextInput, TopBar };
+export { Loading, CustomButton, TextInput, TopBar, ProfileCard};

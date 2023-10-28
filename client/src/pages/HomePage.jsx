@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { TopBar } from "../components";
+import { ProfileCard, TopBar } from "../components";
 
 const HomePage = () => {
   const { user } = useSelector((state) => state.user);
@@ -7,6 +7,16 @@ const HomePage = () => {
   return (
     <div className="home w-full px-0 lg:px-10 pb-20 2xl:px-40 lg:rounded-lg h-screen overflow-hidden">
       <TopBar/>
+      <div className="w-full flex gap-2 lg:gap-4 pt-5 pb-10 h-full">
+        {/* Left */}
+        <div className="hidden w-1/3 lg:w-1/4 h-full md:flex flex-col gap-6 overflow-y-auto">
+          <ProfileCard user={user}/>
+        </div>
+        {/* Center */}
+        <div></div>
+        {/* Right */}
+        <div></div>
+      </div>
     </div>
   );
 };
