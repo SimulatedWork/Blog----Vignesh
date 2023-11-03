@@ -54,15 +54,15 @@ const ProfileCard = ({ user }) => {
           <p className="text-ascent-1 text-lg font-semibold">Social Profiles</p>
           <div className="flex gap-2 items-center text-ascent-2">
             <BsInstagram className="text-xl text-ascent-1" />
-            <span className="text-sm">Instagram</span>
+            <span className="text-sm"><Link to='https://www.instagram.com/'>Instagram</Link></span>
           </div>
           <div className="flex gap-2 items-center text-ascent-2">
             <FaTwitterSquare className="text-xl text-ascent-1" />
-            <span className="text-sm">Twitter</span>
+            <span className="text-sm"><Link to='https://www.twitter.com/'>Twitter</Link></span>
           </div>
           <div className="flex gap-2 items-center text-ascent-2">
             <BsFacebook className="text-xl text-ascent-1" />
-            <span className="text-sm">Facebook</span>
+            <span className="text-sm"><Link to='https://www.facebook.com/'>Facebook</Link></span>
           </div>
         </div>
       </div>
