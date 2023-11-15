@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
 
-const URI = "mongodb+srv://VighneshZagade:VighneshZagade@bloggyverse.okd2w8w.mongodb.net/?retryWrites=true&w=majority"
 const Connection = () => {
-    mongoose.connect(URI)
+    mongoose.connect(process.env.MONGODB_URL)
     .then(()=>{
         console.log('Database Connection Successful')
     })
