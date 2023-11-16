@@ -2,34 +2,31 @@ import mongoose from 'mongoose'
 
 const userSchema = mongoose.Schema(
     {
-        username: {
+        email: {
             type: String, 
-            required: true
+            required: [true, "Email is Required!"], 
+            unique: true
         }, 
         password: {
             type: String, 
-            required: true
+            required: [true, "Password is Required!"],
+            minlength: [6, "Password should have more than 6 characters"],
+            select: true
         }, 
         firstName: {
             type: String, 
-            required: true
+            required: [true, "First Name is Required!"]
         },
         lastName: {
             type: String, 
-            required: true
+            required: [true, "Last Name is Required!"]
         }, 
-        isAdmin: {
-            type: Boolean, 
-            default: false
-        }, 
-        profilePicture: String, 
-        coverPicture: String, 
-        about: String, 
-        livesin: String,  
+        profileUrl:{type: String}, 
+        friends: {type: String}
     },
     {timestamps: true}
 )
 
-const UserModel = mongoose.model('Users', userSchema)
+const Users = mongoose.model('Users', userSchema)
 
-export default UserModel
+export default Users
